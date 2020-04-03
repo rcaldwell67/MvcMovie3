@@ -23,6 +23,7 @@ namespace MvcMovie.Controllers
         {
             return View(await _context.SportsStats.ToListAsync());
         }
+
         // 
         // GET: /HelloWorld/
 

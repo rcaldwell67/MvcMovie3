@@ -65,6 +65,20 @@ namespace MvcMovie_Production
                     options.UseSqlServer(connectionString);
                 }
             });
+
+            services.AddDbContext<Sports_HistoryContext>(options =>
+            {
+                var connectionString = Configuration.GetConnectionString("Sports_HistoryContext");
+
+                if (Environment.IsDevelopment())
+                {
+                    options.UseSqlite(connectionString);
+                }
+                else
+                {
+                    options.UseSqlServer(connectionString);
+                }
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

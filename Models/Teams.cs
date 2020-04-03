@@ -99,7 +99,8 @@ namespace MvcMovie.Models
         [Column(TypeName = "decimal(18,4)")]
         public decimal? wins { get; set; }
         
-        public string? statHash { get; set; }
+       // public string? statHash { get; set; }
+        public string statHash { get; set; }
 
         [Display(Name = "Win%")]
         [DisplayFormat(DataFormatString = "{0:P2}")]

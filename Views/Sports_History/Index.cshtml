@@ -1,0 +1,10 @@
+﻿@model IEnumerable<MvcMovie.Models.Sports_History>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Sports History Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Last Data Update @Model.First().UpdateTimeStamp.</p>
+</div>

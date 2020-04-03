@@ -32,6 +32,9 @@ namespace MvcMovie
 
             services.AddDbContext<TeamsContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("TeamsContext")));
+
+            services.AddDbContext<Sports_HistoryContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Sports_HistoryContext")));
         }
         #endregion
 #else
