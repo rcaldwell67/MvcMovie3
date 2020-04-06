@@ -6,14 +6,14 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 
-namespace MvcMovie.Models
+namespace SportsData.Models
 {
     public static class SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new MvcMovieContext(
-                serviceProvider.GetRequiredService<DbContextOptions<MvcMovieContext>>()))
+            using (var context = new SportsDataContext(
+                serviceProvider.GetRequiredService<DbContextOptions<SportsDataContext>>()))
             {
                 // Look for any movies.
                 if (context.Movie.Any())
@@ -21,7 +21,7 @@ namespace MvcMovie.Models
                     return;   // DB has been seeded
                 }
 
-                #region snippet1
+#region snippet1
                 context.Movie.AddRange(
                     new Movie
                     {
@@ -31,7 +31,7 @@ namespace MvcMovie.Models
                         Price = 7.99M,
                         Rating = "R"
                     },
-                #endregion
+#endregion
 
                     new Movie
                     {

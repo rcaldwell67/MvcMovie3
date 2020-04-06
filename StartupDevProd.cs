@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MvcMovie.Data;
+using SportsData.Data;
 
-namespace MvcMovie_Production
+namespace SportsData_Production
 {
     #region snippet_StartupClass
     public class Startup
@@ -24,9 +24,9 @@ namespace MvcMovie_Production
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<MvcMovieContext>(options =>
+            services.AddDbContext<SportsDataContext>(options =>
             {
-                var connectionString = Configuration.GetConnectionString("MvcMovieContext");
+                var connectionString = Configuration.GetConnectionString("SportsDataContext");
 
                 if (Environment.IsDevelopment())
                 {

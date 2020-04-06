@@ -1,18 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MvcMovie.Data;
-using MvcMovie.Models;
+using SportsData.Data;
+using SportsData.Models;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MvcMovie.Controllers
+namespace SportsData.Controllers
 {
     public class MoviesController : Controller
     {
-        private readonly MvcMovieContext _context;
+        private readonly SportsDataContext _context;
 
-        public MoviesController(MvcMovieContext context)
+        public MoviesController(SportsDataContext context)
         {
             _context = context;
         }

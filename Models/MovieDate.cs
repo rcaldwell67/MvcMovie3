@@ -4,7 +4,7 @@
 #region snippet_1
 using System;
 
-namespace MvcMovie.Models
+namespace SportsData.Models
 {
     public class Movie
     {

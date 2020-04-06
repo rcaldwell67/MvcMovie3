@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MvcMovie.Data;
-using MvcMovie.Models;
+using SportsData.Data;
+using SportsData.Models;
 using System;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 
-namespace MvcMovie.Controllers
+namespace SportsData.Controllers
 {
     public class Sports_HistoryController : Controller
     {

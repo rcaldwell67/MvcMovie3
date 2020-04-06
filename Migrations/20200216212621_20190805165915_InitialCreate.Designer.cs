@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MvcMovie.Data;
+using SportsData.Data;
 
-namespace MvcMovie.Migrations
+namespace SportsData.Migrations
 {
-    [DbContext(typeof(MvcMovieContext))]
+    [DbContext(typeof(SportsDataContext))]
     [Migration("20200216212621_20190805165915_InitialCreate")]
     partial class _20190805165915_InitialCreate
     {
@@ -21,7 +21,7 @@ namespace MvcMovie.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MvcMovie.Models.Movie", b =>
+            modelBuilder.Entity("SportsData.Models.Movie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

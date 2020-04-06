@@ -1,6 +1,6 @@
 using System;
 
-namespace MvcMovie.Models
+namespace SportsData.Models
 {
     public class ErrorViewModel
     {

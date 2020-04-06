@@ -4,9 +4,9 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MvcMovie.Models
+namespace SportsData.Models
 {
-    #region snippet1
+#region snippet1
     public class Movie
     {
         public int Id { get; set; }
@@ -15,7 +15,7 @@ namespace MvcMovie.Models
         [Required]
         public string Title { get; set; }
 
-        #region snippet2
+#region snippet2
         [Display(Name = "Release Date")]
         [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
@@ -24,7 +24,7 @@ namespace MvcMovie.Models
         [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
-        #endregion
+#endregion
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
         [Required]
@@ -36,6 +36,6 @@ namespace MvcMovie.Models
         [Required]
         public string Rating { get; set; }
     }
-    #endregion
+#endregion
 }
 #endif

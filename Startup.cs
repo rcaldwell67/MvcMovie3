@@ -5,9 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using MvcMovie.Data;
+using SportsData.Data;
 
-namespace MvcMovie
+namespace SportsData
 {
     public class Startup
     {
@@ -24,8 +24,8 @@ namespace MvcMovie
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<MvcMovieContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
+            services.AddDbContext<SportsDataContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("SportsDataContext")));
 
             services.AddDbContext<SportsStatsContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("SportsStatsContext")));
@@ -43,8 +43,8 @@ namespace MvcMovie
         {
             services.AddControllersWithViews();
             
-            services.AddDbContext<MvcMovieContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext")));
+            services.AddDbContext<SportsDataContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("SportsDataContext")));
         }
         #endregion
 #endif

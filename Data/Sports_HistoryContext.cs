@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MvcMovie.Models;
+using SportsData.Models;
 
-namespace MvcMovie.Data
+namespace SportsData.Data
 {
     public class Sports_HistoryContext : DbContext
     {

@@ -4,19 +4,19 @@
 #region snippet_1 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using MvcMovie.Data;
+using SportsData.Data;
 using System;
 using System.Linq;
 
-namespace MvcMovie.Models
+namespace SportsData.Models
 {
     public static class SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new MvcMovieContext(
+            using (var context = new SportsDataContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<MvcMovieContext>>()))
+                    DbContextOptions<SportsDataContext>>()))
             {
                 // Look for any movies.
                 if (context.Movie.Any())

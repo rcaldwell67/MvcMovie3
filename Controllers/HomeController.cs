@@ -6,10 +6,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using MvcMovie.Data;
-using MvcMovie.Models;
+using SportsData.Data;
+using SportsData.Models;
 
-namespace MvcMovie.Controllers
+namespace SportsData.Controllers
 {
     public class HomeController : Controller
     {
